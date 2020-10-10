@@ -14,10 +14,10 @@ public class ProxySubject implements ISubject {
     @Override
     public void request() {
         System.out.println("ProxySubject request");
+        if(null == realSubject){
+            realSubject = new RealSubject();
+        }
         realSubject.request();
     }
 
-    public void setRealSubject(RealSubject realSubject) {
-        this.realSubject = realSubject;
-    }
 }

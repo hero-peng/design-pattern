@@ -10,7 +10,6 @@ public class ProxyMain {
     public static void main(String[] args) {
 
         ProxySubject proxy = new ProxySubject();
-        proxy.setRealSubject(new RealSubject());
         proxy.request();
 
     }
