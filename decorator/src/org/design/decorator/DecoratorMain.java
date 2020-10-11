@@ -1,5 +1,7 @@
 package org.design.decorator;
 
+import org.design.decorator.interfaces.IComponent;
+
 /**
  * @Author ybpeng
  * @create: 2020/10/10 0010 16:44
@@ -16,6 +18,12 @@ public class DecoratorMain {
 
     public static void main(String[] args) {
 
+        IComponent p=new ConcreteComponent();
+        p.operation();
+        System.out.println("-------------------------------------------------------------");
+
+        IComponent d = new ConcreteDecoratorA(p);
+        d.operation();
     }
 
 }
